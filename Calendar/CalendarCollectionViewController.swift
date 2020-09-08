@@ -26,25 +26,38 @@ class CalendarCollectionViewController: UICollectionViewController {
 
         // Register cell classes
         self.collectionView!.register(UINib(nibName: "DayCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
+        setItemSize()
+        let range = Calendar.current.range(of: .day, in: .month, for: date)
+        numberOfDays = range?.count ?? 0
+
+        
+        
+        // Do any additional setup after loading the view.
+    }
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        coordinator.animate(alongsideTransition: nil, completion: { _ in
+            self.setItemSize()
+        })
+    }
+    func setItemSize()
+    {
         if let layout = self.collectionViewLayout as? UICollectionViewFlowLayout
         {
            let width = (UIScreen.main.bounds.width - 10 )/8
             layout.itemSize = CGSize(width: width, height: width)
             layout.invalidateLayout()
+            collectionView.reloadData()
         }
-        let range = Calendar.current.range(of: .day, in: .month, for: date)
-        numberOfDays = range?.count ?? 0
+        day = 1
         var dateComponents = Calendar.current.dateComponents([.month,.year], from: date)
         dateComponents.day = 1
-        
         if let firstDate = Calendar.current.date(from: dateComponents)
         {
             let dayOfTheWeek = Calendar.current.component(.weekday, from: firstDate)
             firstDay = dayOfTheWeek - 1
         }
-        // Do any additional setup after loading the view.
     }
-
     /*
     // MARK: - Navigation
 
@@ -92,6 +105,7 @@ class CalendarCollectionViewController: UICollectionViewController {
                 }
                 else
                 {
+                    dayCell.dayLabel.text = ""
                     firstDay -= 1
                 }
             }
