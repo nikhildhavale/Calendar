@@ -40,7 +40,7 @@ class CalendarCollectionViewController: UICollectionViewController {
         if let firstDate = Calendar.current.date(from: dateComponents)
         {
             let dayOfTheWeek = Calendar.current.component(.weekday, from: firstDate)
-            firstDay = dayOfTheWeek - 1 
+            firstDay = dayOfTheWeek - 1
         }
         // Do any additional setup after loading the view.
     }

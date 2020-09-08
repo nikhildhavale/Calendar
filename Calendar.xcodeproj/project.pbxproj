@@ -17,6 +17,7 @@
 		AE7B9B71250746AD000F1462 /* CalendarCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7B9B70250746AD000F1462 /* CalendarCollectionViewController.swift */; };
 		AE7B9B7625074834000F1462 /* DayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7B9B7425074834000F1462 /* DayCollectionViewCell.swift */; };
 		AE7B9B7725074834000F1462 /* DayCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE7B9B7525074834000F1462 /* DayCollectionViewCell.xib */; };
+		AE917A0425075B6600784BA5 /* PageContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE917A0325075B6600784BA5 /* PageContainerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		AE7B9B70250746AD000F1462 /* CalendarCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewController.swift; sourceTree = "<group>"; };
 		AE7B9B7425074834000F1462 /* DayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCollectionViewCell.swift; sourceTree = "<group>"; };
 		AE7B9B7525074834000F1462 /* DayCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayCollectionViewCell.xib; sourceTree = "<group>"; };
+		AE917A0325075B6600784BA5 /* PageContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContainerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				AE52CC5A2507456200577E9E /* AppDelegate.swift */,
 				AE52CC5C2507456200577E9E /* SceneDelegate.swift */,
 				AE52CC602507456200577E9E /* Main.storyboard */,
+				AE917A0325075B6600784BA5 /* PageContainerViewController.swift */,
 				AE7B9B6E2507468E000F1462 /* CalendarCollectionContainerViewController.swift */,
 				AE7B9B70250746AD000F1462 /* CalendarCollectionViewController.swift */,
 				AE7B9B6C25074622000F1462 /* CalendarPageViewController.swift */,
@@ -151,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE917A0425075B6600784BA5 /* PageContainerViewController.swift in Sources */,
 				AE52CC5B2507456200577E9E /* AppDelegate.swift in Sources */,
 				AE7B9B7625074834000F1462 /* DayCollectionViewCell.swift in Sources */,
 				AE52CC5D2507456200577E9E /* SceneDelegate.swift in Sources */,

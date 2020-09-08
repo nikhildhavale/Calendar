@@ -23,9 +23,8 @@ class CalendarCollectionContainerViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMMM yyyy"
-        titleLabel.text = dateFormatter.string(from: date)
+       
+       // titleLabel.text = dateFormatter.string(from: date)
         // Do any additional setup after loading the view.
     }
     
