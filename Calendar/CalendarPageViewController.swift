@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CalendarPageViewController: UIPageViewController,UIPageViewControllerDataSource {
+class CalendarPageViewController: UIPageViewController,UIPageViewControllerDataSource,UIPageViewControllerDelegate{
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         date = Calendar.current.date(byAdding: .month, value: -1, to: date) ?? date
         if let calendarController = CalendarCollectionContainerViewController.getCalendarContainerController(date: date)
@@ -26,7 +26,15 @@ class CalendarPageViewController: UIPageViewController,UIPageViewControllerDataS
         }
         return nil
     }
-    
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        if completed
+        {
+            DispatchQueue.main.async {
+                self.dataSource = nil
+                self.dataSource = self
+            }
+        }
+    }
     var date = Date()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +42,7 @@ class CalendarPageViewController: UIPageViewController,UIPageViewControllerDataS
         {
             self.setViewControllers([calendarController], direction: .forward, animated: true, completion: nil)
             self.dataSource = self
+            self.delegate = self
         }
         // Do any additional setup after loading the view.
     }

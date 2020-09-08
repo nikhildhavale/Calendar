@@ -16,6 +16,8 @@ struct CalendarConstant
 class CalendarCollectionViewController: UICollectionViewController {
     var date = Date()
     var numberOfDays = 0
+    var firstDay = 0
+    var day = 1
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,6 +34,14 @@ class CalendarCollectionViewController: UICollectionViewController {
         }
         let range = Calendar.current.range(of: .day, in: .month, for: date)
         numberOfDays = range?.count ?? 0
+        var dateComponents = Calendar.current.dateComponents([.month,.year], from: date)
+        dateComponents.day = 1
+        
+        if let firstDate = Calendar.current.date(from: dateComponents)
+        {
+            let dayOfTheWeek = Calendar.current.component(.weekday, from: firstDate)
+            firstDay = dayOfTheWeek - 1 
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -60,7 +70,7 @@ class CalendarCollectionViewController: UICollectionViewController {
             return 7
 
         }
-        return numberOfDays 
+        return numberOfDays  + firstDay
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -74,8 +84,16 @@ class CalendarCollectionViewController: UICollectionViewController {
             }
             else
             {
-                dayCell.dayLabel.text = "\(indexPath.row + 1)"
+                if firstDay == 0
+                {
+                    dayCell.dayLabel.text = "\(day)"
+                    day += 1
 
+                }
+                else
+                {
+                    firstDay -= 1
+                }
             }
         }
         // Configure the cell
