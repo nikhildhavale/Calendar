@@ -86,7 +86,7 @@
         <!--Calendar Page View Controller-->
         <scene sceneID="QVR-US-Cox">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="pvh-VF-eFd" customClass="CalendarPageViewController" customModule="Calendar" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="pvh-VF-eFd" customClass="CalendarPageViewController" customModule="Calendar" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bBJ-Eo-UvA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="15" y="-60"/>

@@ -15,6 +15,7 @@ struct CalendarConstant
 }
 class CalendarCollectionViewController: UICollectionViewController {
     var date = Date()
+    var numberOfDays = 0
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,6 +30,8 @@ class CalendarCollectionViewController: UICollectionViewController {
             layout.itemSize = CGSize(width: width, height: width)
             layout.invalidateLayout()
         }
+        let range = Calendar.current.range(of: .day, in: .month, for: date)
+        numberOfDays = range?.count ?? 0
         // Do any additional setup after loading the view.
     }
 
@@ -52,15 +55,28 @@ class CalendarCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 7
+        if section == 0
+        {
+            return 7
+
+        }
+        return numberOfDays 
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
         if let dayCell = cell as? DayCollectionViewCell
         {
-            
-            dayCell.dayLabel.text = CalendarConstant.dayArray[indexPath.row]
+            if indexPath.section == 0
+            {
+                dayCell.dayLabel.text = CalendarConstant.dayArray[indexPath.row]
+
+            }
+            else
+            {
+                dayCell.dayLabel.text = "\(indexPath.row + 1)"
+
+            }
         }
         // Configure the cell
     

@@ -8,14 +8,32 @@
 
 import UIKit
 
-class CalendarPageViewController: UIPageViewController {
-
+class CalendarPageViewController: UIPageViewController,UIPageViewControllerDataSource {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        date = Calendar.current.date(byAdding: .month, value: -1, to: date) ?? date
+        if let calendarController = CalendarCollectionContainerViewController.getCalendarContainerController(date: date)
+        {
+            return calendarController
+        }
+        return nil
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        date = Calendar.current.date(byAdding: .month, value: 1, to: date) ?? date
+        if let calendarController = CalendarCollectionContainerViewController.getCalendarContainerController(date: date)
+        {
+            return calendarController
+        }
+        return nil
+    }
+    
+    var date = Date()
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let calendarController = CalendarCollectionContainerViewController.getCalendarContainerController(date: Date())
+        if let calendarController = CalendarCollectionContainerViewController.getCalendarContainerController(date: date)
         {
             self.setViewControllers([calendarController], direction: .forward, animated: true, completion: nil)
-
+            self.dataSource = self
         }
         // Do any additional setup after loading the view.
     }
