@@ -12,6 +12,11 @@
 		AE52CC622507456200577E9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE52CC602507456200577E9E /* Main.storyboard */; };
 		AE52CC642507456600577E9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE52CC632507456600577E9E /* Assets.xcassets */; };
 		AE52CC672507456600577E9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE52CC652507456600577E9E /* LaunchScreen.storyboard */; };
+		AE7B9B6D25074622000F1462 /* CalendarPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7B9B6C25074622000F1462 /* CalendarPageViewController.swift */; };
+		AE7B9B6F2507468E000F1462 /* CalendarCollectionContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7B9B6E2507468E000F1462 /* CalendarCollectionContainerViewController.swift */; };
+		AE7B9B71250746AD000F1462 /* CalendarCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7B9B70250746AD000F1462 /* CalendarCollectionViewController.swift */; };
+		AE7B9B7625074834000F1462 /* DayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7B9B7425074834000F1462 /* DayCollectionViewCell.swift */; };
+		AE7B9B7725074834000F1462 /* DayCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE7B9B7525074834000F1462 /* DayCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		AE52CC632507456600577E9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE52CC662507456600577E9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE52CC682507456600577E9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE7B9B6C25074622000F1462 /* CalendarPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPageViewController.swift; sourceTree = "<group>"; };
+		AE7B9B6E2507468E000F1462 /* CalendarCollectionContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionContainerViewController.swift; sourceTree = "<group>"; };
+		AE7B9B70250746AD000F1462 /* CalendarCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewController.swift; sourceTree = "<group>"; };
+		AE7B9B7425074834000F1462 /* DayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCollectionViewCell.swift; sourceTree = "<group>"; };
+		AE7B9B7525074834000F1462 /* DayCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +64,14 @@
 		AE52CC592507456200577E9E /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				AE7B9B7425074834000F1462 /* DayCollectionViewCell.swift */,
+				AE7B9B7525074834000F1462 /* DayCollectionViewCell.xib */,
 				AE52CC5A2507456200577E9E /* AppDelegate.swift */,
 				AE52CC5C2507456200577E9E /* SceneDelegate.swift */,
 				AE52CC602507456200577E9E /* Main.storyboard */,
+				AE7B9B6E2507468E000F1462 /* CalendarCollectionContainerViewController.swift */,
+				AE7B9B70250746AD000F1462 /* CalendarCollectionViewController.swift */,
+				AE7B9B6C25074622000F1462 /* CalendarPageViewController.swift */,
 				AE52CC632507456600577E9E /* Assets.xcassets */,
 				AE52CC652507456600577E9E /* LaunchScreen.storyboard */,
 				AE52CC682507456600577E9E /* Info.plist */,
@@ -125,6 +140,7 @@
 				AE52CC672507456600577E9E /* LaunchScreen.storyboard in Resources */,
 				AE52CC642507456600577E9E /* Assets.xcassets in Resources */,
 				AE52CC622507456200577E9E /* Main.storyboard in Resources */,
+				AE7B9B7725074834000F1462 /* DayCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +152,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE52CC5B2507456200577E9E /* AppDelegate.swift in Sources */,
+				AE7B9B7625074834000F1462 /* DayCollectionViewCell.swift in Sources */,
 				AE52CC5D2507456200577E9E /* SceneDelegate.swift in Sources */,
+				AE7B9B71250746AD000F1462 /* CalendarCollectionViewController.swift in Sources */,
+				AE7B9B6F2507468E000F1462 /* CalendarCollectionContainerViewController.swift in Sources */,
+				AE7B9B6D25074622000F1462 /* CalendarPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
