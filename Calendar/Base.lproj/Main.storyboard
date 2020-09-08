@@ -81,29 +81,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="akW-gb-sGC">
-                                <rect key="frame" x="0.0" y="74" width="414" height="788"/>
+                                <rect key="frame" x="0.0" y="66" width="414" height="796"/>
                                 <connections>
                                     <segue destination="pvh-VF-eFd" kind="embed" id="n9y-9o-euv"/>
                                 </connections>
                             </containerView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="Wkd-OH-qXy">
-                                <rect key="frame" x="20" y="44" width="374" height="30"/>
+                                <rect key="frame" x="20" y="44" width="374" height="22"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Sv-Lv-XFx">
-                                        <rect key="frame" x="0.0" y="0.0" width="32" height="30"/>
-                                        <state key="normal" title="&lt;" image="arrow.left.circle" catalog="system"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="20" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" image="arrow.left.circle" catalog="system"/>
                                         <connections>
                                             <action selector="nextOrPrevious:" destination="GzO-Ng-IjB" eventType="touchUpInside" id="KuG-32-TK8"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRj-cV-yYZ">
-                                        <rect key="frame" x="169" y="0.0" width="42" height="30"/>
+                                        <rect key="frame" x="166" y="0.0" width="42" height="22"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJt-4T-Prz">
-                                        <rect key="frame" x="354" y="0.0" width="20" height="30"/>
+                                        <rect key="frame" x="354" y="0.0" width="20" height="22"/>
                                         <state key="normal" image="arrow.right.circle" catalog="system"/>
                                         <connections>
                                             <action selector="nextOrPrevious:" destination="GzO-Ng-IjB" eventType="touchUpInside" id="hgi-31-cv4"/>
@@ -111,7 +112,7 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Lgf-Bu-4sQ"/>
+                                    <constraint firstItem="HJt-4T-Prz" firstAttribute="height" secondItem="5Sv-Lv-XFx" secondAttribute="height" id="nrz-Ox-E0U"/>
                                 </constraints>
                             </stackView>
                         </subviews>
